@@ -22,7 +22,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => \yii\web\User::class,
+            'identityClass' => \app\models\User::class,
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -54,7 +54,14 @@ $config = [
                 '/create' => 'promocodes/create',
                 '/update' => 'promocodes/update',
                 '/delete' => 'promocodes/delete',
+                'GET /api/promocodes/search' => 'api/promocodes/search',
+                'POST /api/promocodes/activate' => 'api/promocodes/activate',
             ],
+        ],
+    ],
+    'modules' => [
+        'api' => [
+            'class' => \app\modules\api\Module::class,
         ],
     ],
     'params' => $params,

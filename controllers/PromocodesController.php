@@ -42,8 +42,11 @@ class PromocodesController extends Controller
             'query' => PromoCode::find()
         ]);
 
+        $tariffZones = ArrayHelper::map(TariffZone::find()->all(), 'id', 'name');
+
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'tariffZones' => $tariffZones,
         ]);
     }
 

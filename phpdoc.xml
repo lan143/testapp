@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <parser>
+        <target>docs/main</target>
+    </parser>
+    <transformer>
+        <target>docs/main</target>
+    </transformer>
+    <files>
+        <directory>./assets</directory>
+        <directory>./commands</directory>
+        <directory>./controllers</directory>
+        <directory>./enums</directory>
+        <directory>./forms</directory>
+        <directory>./models</directory>
+        <directory>./modules</directory>
+    </files>
+</phpdoc>

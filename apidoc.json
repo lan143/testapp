@@ -1,0 +1,7 @@
+{
+  "name": "Testapp",
+  "version": "0.1.0",
+  "description": "apiDoc for testapp",
+  "title": "apiDoc",
+  "url" : "http://testapp.local/api"
+}

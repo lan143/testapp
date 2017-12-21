@@ -1,6 +1,9 @@
 <?php
 
-/* @var $this yii\web\View */
+/*
+ * @var View $this
+ * @var array $tariffZones
+ */
 
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -48,4 +51,29 @@ $this->title = 'Test App';
         ],
     ]); ?>
     <?php Pjax::end(); ?>
+</div>
+
+<div>
+    <h3>Search</h3>
+
+    <div id="search-results">
+    </div>
+
+    <input type="text" name="search" placeholder="Please enter name..." />
+</div>
+
+<div>
+    <h3>Activate</h3>
+
+    <form name="activate">
+        <input type="text" name="name" placeholder="Please enter name..." />
+
+        <select name="tariff_code">
+            <?php foreach($tariffZones as $id => $name): ?>
+                <option value="<?= $id ?>"><?= $name ?></option>
+            <?php endforeach ?>
+        </select>
+
+        <input type="submit" value="Activate" />
+    </form>
 </div>

@@ -1,0 +1,24 @@
+<?php
+
+namespace app\modules\api;
+
+use yii\filters\auth\HttpBearerAuth;
+use yii\rest\ActiveController;
+use yii\web\Response;
+
+class BaseController extends ActiveController
+{
+    /**
+     * @return array
+     */
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['bearerAuth'] = [
+            'class' => HttpBearerAuth::className(),
+        ];
+
+        return $behaviors;
+    }
+}
